@@ -1,9 +1,9 @@
 using System;
 
-namespace CalcEngine.PhraseAnalyzer
+namespace CalcEngine.Phrase
 {
 	/// <summary>
-	/// 优先级表
+	/// 浼樺厛绾ц〃
 	/// </summary>
 	public enum OperatorPriority:int
 	{

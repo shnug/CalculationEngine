@@ -27,7 +27,7 @@ namespace CalcEngine
         /// <summary>
         /// variable list
         /// </summary>
-        public Variables VarsList
+        public Variables Variables
         {
             get { 
                 return _variables;
@@ -69,12 +69,12 @@ namespace CalcEngine
         {
             get
             {
-                if (VarsList.ANS.CompareTo(double.NaN) == 0		//none-number
-                    || VarsList.ANS.CompareTo(double.PositiveInfinity) == 0	//positive infinity
-                    || VarsList.ANS.CompareTo(double.NegativeInfinity) == 0)	//negitive infinity
+                if (Variables.ANS.CompareTo(double.NaN) == 0		//none-number
+                    || Variables.ANS.CompareTo(double.PositiveInfinity) == 0	//positive infinity
+                    || Variables.ANS.CompareTo(double.NegativeInfinity) == 0)	//negitive infinity
                     throw new CalculationException("Calculation failed");
 
-                return VarsList.ANS;
+                return Variables.ANS;
             }
         }
         public void Analyze(string expression)
@@ -84,7 +84,7 @@ namespace CalcEngine
         }
         public void ClearANS()
         {
-            VarsList.ANS=0;
+            Variables.ANS=0;
         }
         #region IDisposable Members
 

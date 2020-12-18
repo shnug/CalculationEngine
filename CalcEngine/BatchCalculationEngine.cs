@@ -5,7 +5,7 @@ using CalcEngine.Phrase;
 
 namespace CalcEngine
 {
-    public class BatchCalculationEngine:ICalculationEngine
+    public class BatchCalculationEngine:IBatchCalculation
     {
         List<double> _batchResults=null;
         CalculationContext _global;
@@ -40,13 +40,13 @@ namespace CalcEngine
         {
             get { return this._global; }
         }
-        protected virtual void OnBeforeCalculation(CalculationEventArgs e)
+        public virtual void OnBeforeCalculation(CalculationEventArgs e)
         {
             if (BeforeCalculation != null)
                 BeforeCalculation(this, e);
         }
 
-        protected virtual void OnCalculationComplete(CalculationEventArgs e)
+        public virtual void OnCalculationComplete(CalculationEventArgs e)
         {
             if (CalculationComplete != null)
                 CalculationComplete(this, e);

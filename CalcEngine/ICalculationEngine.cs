@@ -10,5 +10,6 @@ namespace CalcEngine
     public interface ICalculationEngine
     {
         void Run();
+        double Calculate();
     }
 }

@@ -1,3 +1,5 @@
+[![NuGet](https://img.shields.io/nuget/dt/CalEngine)](https://www.nuget.org/packages/CalEngine)
+
 It used to be called Calculator.NET. As the name indicates, this is an calculator project. The difference from Windows Caculator is that it supports expression calculation, which can greatly improve user experience.
 
 Now, I rename it as CalcEngine to provide great features like expression calculation, variable list and data provider. This library will be useful in financial system, which needs calculation very frequently.
